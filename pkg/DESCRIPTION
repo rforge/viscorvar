@@ -1,0 +1,16 @@
+Package: visCorVar
+Type: Package
+Title: Overlaying of Correlation Circles and Network of Correlated
+        Variables
+Version: 0.5
+Date: 2020-05-29  
+Author: Maxime BRUNIN
+Maintainer: Maxime BRUNIN <maxime.brunin@univ-lille.fr>
+Description: visCorVar does analysis from data integration with the function block.splsda (mixOmics package). visCorVar performs the overlaying of correlation circles and a zoom in a rectangle to retrieve correlated variables. visCorVar can create a network of correlated variables.
+License: GPL
+RoxygenNote: 7.1.0
+Depends: R (>= 3.5.0)
+Imports: mixOmics, ellipse, RColorBrewer, igraph, grDevices
+Suggests: testthat, knitr, rmarkdown, xtable
+Encoding: UTF-8
+VignetteBuilder: knitr
