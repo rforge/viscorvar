@@ -56,12 +56,12 @@ The paramter X contains the blocks measured on the same samples. The parameter Y
 # Pre-processing
 
 ```{r block_Y, echo=FALSE}
-data(block_Y)
+load(system.file("extdata", "block_Y.rda", package="visCorVar"))
 xtable_block_Y = xtable(block_Y)
 ```
 
 ```{r variables_of_interest, echo=FALSE}
-data(var_interest)
+load(system.file("extdata", "var_interest.rda", package="visCorVar"))
 dataframe_var_interest = data.frame(var = var_interest)
 xtable_var_interest = xtable(dataframe_var_interest)
 ```
@@ -86,7 +86,7 @@ knitr::kable(xtable_var_interest)
 ```
 
 ```{r preprocessing, echo = TRUE}
-data(res_data_integration)
+load(system.file("extdata", "res_data_integration.rda", package="visCorVar"))
 comp = 1:2
 cutoff_comp = 0.8
 res_matCorAddVar = matCorAddVar(res_block_splsda = res_data_integration,
