@@ -122,7 +122,7 @@ circleCor <-function(list_dataframe_cor_comp_var_global,
     
     names_group_blocks = names(list_dataframe_cor_comp_var_global)[which(index_names_blocks == TRUE)]
     names_group_blocks2 = strsplit(names_group_blocks, split = "-")[[1]]
-    index_group_blocks = unique(c(which(colnames(mat_cor_comp1) == names_group_blocks2[1], index_blocks)))
+    index_group_blocks = which(colnames(mat_cor_comp1) == names_group_blocks2[1])
     
     dataframe_cor_comp_var_global = list_dataframe_cor_comp_var_global[[which(index_names_blocks == TRUE)]]
     dataframe_cor_comp_var_global_temp1 = dataframe_cor_comp_var_global

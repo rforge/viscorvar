@@ -25,9 +25,9 @@ The function computeMatSimilarity performs the computation of the similarity mat
 between two variables is an approximation of the correlation between these two variables.
 }
 \examples{
-data(res_data_integration)
-data(block_Y)
-data(var_interest)
+load(system.file("extdata", "res_data_integration.rda", package="visCorVar"))
+load(system.file("extdata", "block_Y.rda", package="visCorVar"))
+load(system.file("extdata", "var_interest.rda", package="visCorVar"))
 comp = 1:2
 cutoff_comp = 0.8
 res_matCorAddVar = matCorAddVar(res_data_integration, block_Y,

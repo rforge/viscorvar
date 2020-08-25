@@ -40,9 +40,9 @@ these variable will be in the network.
 }
 \examples{
 library(RColorBrewer)
-data(res_data_integration)
-data(block_Y)
-data(var_interest)
+load(system.file("extdata", "res_data_integration.rda", package="visCorVar"))
+load(system.file("extdata", "block_Y.rda", package="visCorVar"))
+load(system.file("extdata", "var_interest.rda", package="visCorVar"))
 comp = 1:2
 cutoff_comp = 0.8
 res_matCorAddVar = matCorAddVar(res_data_integration, block_Y,
