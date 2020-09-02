@@ -1,6 +1,6 @@
 .onAttach <- function(libname, pkgname)
 { 
-  packageStartupMessage("\nLoaded visCorVar ",as.character(packageDescription("visCorVar")[["Version"]]),
+  packageStartupMessage("\nLoaded visCorVar ",as.character(utils::packageDescription("visCorVar")[["Version"]]),
                                                                
                                                                "\n https://gitlab.com/bilille/viscorvar/-/blob/master/vignettes/visCorVar.pdf "
 
