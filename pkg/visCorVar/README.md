@@ -60,7 +60,8 @@ The package visCorVar enables to visualize highly correlated variables thanks to
 Before plotting correlation circles, the blocks whose correlation circles can be overlaid have to be determined. Correlations required to plot the correlation circles and to create the network are computed.
 
 ```r
-data(res_data_integration)
+load(system.file("extdata", "var_interest.rda", package="visCorVar"))
+load(system.file("extdata", "block_Y.rda", package="visCorVar"))
 comp = 1:2
 cutoff_comp = 0.8
 res_matCorAddVar = matCorAddVar(res_block_splsda = res_data_integration,
@@ -87,7 +88,7 @@ names_response_variables = c("A", "B")
 comp = 1:2
 vec_col = colorRampPalette(brewer.pal(9, "Spectral"))(dim(mat_cor_comp1)[1] + 1)
 
-names_block_variables=circleCor(list_dataframe_cor_comp_var_global=list_cor_comp_selected_var_resp_var,    
+names_block_variables =   circleCor(list_dataframe_cor_comp_var_global =   list_cor_comp_selected_var_resp_var,    
                                 list_vec_index_block_select = list_vec_index_block_select,
                                 mat_cor_comp1 = mat_cor_comp1,
                                 mat_cor_comp2 = mat_cor_comp2,
@@ -115,9 +116,7 @@ A network can be created with the function networkVar and can be exported in the
 Cytoscape. Before creating the network with the function networkVar, similarity 
 matrices (the similarity is an approximation of the correlation) have to be computed with the function computeMatSimilarity.
 
-```r
-comp = 1:2
-cutoff_comp = 0.8
+```r  
 res_compute_mat_similarity = computeMatSimilarity(res_matCorAddVar = res_matCorAddVar)
 ```
 
@@ -126,9 +125,6 @@ The description of the input parameters is provided in the help of the function 
 The nodes of this network are the response variables, the variables of interest (optional) and the selected block variables. The similarity between two variables is associated with a link between this two variables. This network gives a insight of correlated variables.
 
 ```r
-names_blocks = c("X1", "X3")
-names_response_variables = c("A", "B")
-comp = 1:2
 names_resp_var2 = c("A")
 res_networkVar = networkVar(res_compute_mat_similarity = res_compute_mat_similarity,
                             names_block_variables = names_block_variables,

@@ -2,7 +2,7 @@
 { 
   packageStartupMessage("\nLoaded visCorVar ",as.character(utils::packageDescription("visCorVar")[["Version"]]),
                                                                
-                                                               "\n https://gitlab.com/bilille/viscorvar/-/blob/master/vignettes/visCorVar.pdf "
+                                                               "\n vignette : https://gitlab.com/bilille/viscorvar/-/blob/master/vignettes/visCorVar.pdf "
 
   )}
 
