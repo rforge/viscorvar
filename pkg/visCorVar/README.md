@@ -60,6 +60,8 @@ The package visCorVar enables to visualize highly correlated variables thanks to
 Before plotting correlation circles, the blocks whose correlation circles can be overlaid have to be determined. Correlations required to plot the correlation circles and to create the network are computed.
 
 ```r
+load(system.file("extdata", "var_interest.rda", package="visCorVar"))
+load(system.file("extdata", "block_Y.rda", package="visCorVar"))
 comp = 1:2
 cutoff_comp = 0.8
 res_matCorAddVar = matCorAddVar(res_block_splsda = res_data_integration,
