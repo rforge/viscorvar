@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 visCorVar
 ========
 
@@ -15,7 +12,7 @@ For Ubuntu distribution, the package libgl1-mesa-glx has to be installed :
 ### Within R
 
 To install the visCorVar package from gitlab, open a R session and :
-- Install the package mixOmics 
+- Install the package mixOmics (http://mixomics.org/install/)
 ```r
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
@@ -35,6 +32,11 @@ remotes::install_gitlab("bilille/viscorvar")
 
 How to use visCorVar?
 --------------------
+
+Complete description and examples can be found in the R package vignette.
+```r
+vignette(visCorVar)
+```
 
 # Data integration
 

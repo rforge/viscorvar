@@ -2,6 +2,8 @@
 title: "visCorVar"
 author: "Maxime BRUNIN"
 date: "`r format(Sys.time(), '%d %B %Y')`"
+abstract: > 
+  visCorVar package version `r packageVersion("visCorVar")`
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{visCorVar}
@@ -18,7 +20,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup, echo=FALSE}
-library(visCorVar)
+suppressPackageStartupMessages(library(visCorVar))
 library(xtable)
 ```
 
